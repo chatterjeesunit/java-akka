@@ -123,6 +123,8 @@ cmake-build-*/
 
 # File-based project format
 *.iws
+*.ipr
+*.iml
 
 # IntelliJ
 out/
