@@ -7,9 +7,9 @@ import java.time.Duration;
 
 public class SupervisorActor extends AbstractLoggingActor {
 
-    public SupervisorActor() {
+    private SupervisorActor() {
         ActorRef child = getContext().actorOf(CalculatorActor.props(), "calculator");
-        log().info(child.path().toString());
+        log().info("Created child : " + child.path().toString());
     }
     static Props props() {
         return Props.create(SupervisorActor.class, SupervisorActor::new);
